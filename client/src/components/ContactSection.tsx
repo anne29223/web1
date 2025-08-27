@@ -208,7 +208,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-jjm-secondary mb-1">Phone Number</h4>
-                    <p className="text-jjm-neutral-dark">+1 (555) 123-4567</p>
+                    <p className="text-jjm-neutral-dark">803-525-4143</p>
                   </div>
                 </div>
                 
@@ -218,7 +218,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-jjm-secondary mb-1">Email Address</h4>
-                    <p className="text-jjm-neutral-dark">info@jjmtechnology.com</p>
+                    <p className="text-jjm-neutral-dark">info@jjmtechllc.com</p>
                   </div>
                 </div>
                 

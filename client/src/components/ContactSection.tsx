@@ -21,23 +21,23 @@ export default function ContactSection() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!formData.firstName || !formData.lastName || !formData.email || !formData.service || !formData.message) {
       setSubmitMessage('Please fill in all required fields.');
       return;
     }
 
     setIsSubmitting(true);
-    
+
     try {
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
       });
-      
+
       const result = await response.json();
-      
+
       if (response.ok) {
         setSubmitMessage('Thank you for your message! We will get back to you soon.');
         setFormData({
@@ -75,7 +75,7 @@ export default function ContactSection() {
             Ready to transform your business with cutting-edge technology? Let's discuss your project.
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Contact Form */}
           <div className="bg-jjm-neutral p-8 rounded-2xl">
@@ -107,7 +107,7 @@ export default function ContactSection() {
                   />
                 </div>
               </div>
-              
+
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
                 <input
@@ -120,7 +120,7 @@ export default function ContactSection() {
                   className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-jjm-primary focus:border-jjm-primary"
                 />
               </div>
-              
+
               <div>
                 <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">Company</label>
                 <input
@@ -132,7 +132,7 @@ export default function ContactSection() {
                   className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-jjm-primary focus:border-jjm-primary"
                 />
               </div>
-              
+
               <div>
                 <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">Service Interest *</label>
                 <select 
@@ -149,7 +149,7 @@ export default function ContactSection() {
                   <option value="consulting">Tech Consulting</option>
                 </select>
               </div>
-              
+
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">Project Description *</label>
                 <textarea
@@ -162,13 +162,13 @@ export default function ContactSection() {
                   className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-jjm-primary focus:border-jjm-primary"
                 />
               </div>
-              
+
               {submitMessage && (
                 <div className={`p-4 rounded-lg ${submitMessage.includes('Thank you') ? 'bg-green-50 text-green-800' : 'bg-red-50 text-red-800'}`}>
                   {submitMessage}
                 </div>
               )}
-              
+
               <button 
                 type="submit" 
                 disabled={isSubmitting}
@@ -186,7 +186,7 @@ export default function ContactSection() {
               </button>
             </form>
           </div>
-          
+
           {/* Contact Information */}
           <div className="space-y-8">
             <div>
@@ -201,7 +201,7 @@ export default function ContactSection() {
                     <p className="text-jjm-neutral-dark">123 Tech Street, Innovation City, TC 12345</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-jjm-accent rounded-lg flex items-center justify-center flex-shrink-0">
                     <i className="fas fa-phone text-white"></i>
@@ -211,7 +211,7 @@ export default function ContactSection() {
                     <p className="text-jjm-neutral-dark">803-525-4143</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center flex-shrink-0">
                     <i className="fas fa-envelope text-white"></i>
@@ -221,7 +221,7 @@ export default function ContactSection() {
                     <p className="text-jjm-neutral-dark">info@jjmtechllc.com</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center flex-shrink-0">
                     <i className="fas fa-clock text-white"></i>
@@ -234,7 +234,7 @@ export default function ContactSection() {
                 </div>
               </div>
             </div>
-            
+
             {/* Social Media Links */}
             <div>
               <h3 className="text-2xl font-semibold text-jjm-secondary mb-6">Follow Us</h3>
@@ -253,7 +253,7 @@ export default function ContactSection() {
                 ))}
               </div>
             </div>
-            
+
             {/* Response Time */}
             <div className="bg-green-50 border border-green-200 rounded-lg p-6">
               <div className="flex items-center space-x-3 mb-2">

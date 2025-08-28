@@ -16,7 +16,7 @@ export default function SimpleWebsite() {
               <div className="text-2xl font-bold text-blue-600">JJM Technology</div>
               <div className="text-sm text-gray-500 ml-2">LLC</div>
             </div>
-            
+
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-8">
                 <button onClick={() => scrollToSection('home')} className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Home</button>
@@ -61,7 +61,7 @@ export default function SimpleWebsite() {
               We deliver cutting-edge technology solutions that drive business growth and innovation.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
@@ -149,7 +149,7 @@ export default function SimpleWebsite() {
               Explore our portfolio of successful AI implementations, web applications, and mobile solutions.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
@@ -223,7 +223,7 @@ export default function SimpleWebsite() {
               Ready to transform your business with cutting-edge technology? Let's discuss your project.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             {/* Contact Form */}
             <div className="bg-gray-50 p-8 rounded-2xl">
@@ -248,7 +248,7 @@ export default function SimpleWebsite() {
                 </button>
               </form>
             </div>
-            
+
             {/* Contact Information */}
             <div className="space-y-8">
               <div>
@@ -263,7 +263,7 @@ export default function SimpleWebsite() {
                       <p className="text-gray-600">123 Tech Street, Innovation City, TC 12345</p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center">
                       <span className="text-white">📞</span>
@@ -273,7 +273,7 @@ export default function SimpleWebsite() {
                       <p className="text-gray-600">+1 (555) 123-4567</p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center">
                       <span className="text-white">✉️</span>
@@ -285,7 +285,7 @@ export default function SimpleWebsite() {
                   </div>
                 </div>
               </div>
-              
+
               {/* Social Media Links */}
               <div>
                 <h3 className="text-2xl font-semibold text-gray-800 mb-6">Follow Us</h3>
@@ -319,7 +319,7 @@ export default function SimpleWebsite() {
                 Transforming businesses through innovative AI solutions, automation, and custom software development.
               </p>
             </div>
-            
+
             <div>
               <h4 className="text-lg font-semibold mb-4">Services</h4>
               <ul className="space-y-2 text-gray-300">
@@ -329,7 +329,7 @@ export default function SimpleWebsite() {
                 <li><button onClick={() => scrollToSection('services')}>Mobile Development</button></li>
               </ul>
             </div>
-            
+
             <div>
               <h4 className="text-lg font-semibold mb-4">Company</h4>
               <ul className="space-y-2 text-gray-300">
@@ -338,17 +338,17 @@ export default function SimpleWebsite() {
                 <li><button onClick={() => scrollToSection('contact')}>Contact</button></li>
               </ul>
             </div>
-            
+
             <div>
               <h4 className="text-lg font-semibold mb-4">Contact</h4>
               <div className="space-y-3 text-gray-300">
-                <p>info@jjmtechnology.com</p>
+                <p>info@jjmtechllc.com</p>
                 <p>+1 (555) 123-4567</p>
                 <p>123 Tech Street<br />Innovation City, TC 12345</p>
               </div>
             </div>
           </div>
-          
+
           <div className="border-t border-gray-700 pt-8 text-center text-gray-400">
             © 2024 JJM Technology LLC. All rights reserved.
           </div>

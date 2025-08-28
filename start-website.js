@@ -31,5 +31,5 @@ app.use(express.static(__dirname));
 
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`🚀 JJM Technology website is now live at http://0.0.0.0:${PORT}`);
-  console.log(`📱 Preview should be available in your Replit webview`);
+  console.log(`📱 Website ready for viewing`);
 });

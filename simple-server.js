@@ -20,5 +20,5 @@ const server = http.createServer((req, res) => {
 
 const PORT = process.env.PORT || 5173;
 server.listen(PORT, '0.0.0.0', () => {
-  console.log(`JJM Technology website running on http://0.0.0.0:${PORT}`);
+  console.log(`🚀 JJM Technology website running on http://0.0.0.0:${PORT}`);
 });

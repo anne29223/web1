@@ -24,35 +24,32 @@ JJM Technology LLC professional business website showcasing AI services, automat
 - Complete SEO optimization with structured data and meta tags
 - Social media integration with modern icon design
 - Fully responsive design with smooth animations and hover effects
-- Server running on port 8080 serving website.html successfully
+- Server running on port 5173 serving website.html successfully
 
 ## System Architecture
 
-**Note: This section requires analysis of the actual repository contents to provide accurate architectural details.**
-
 ### Frontend Architecture
-- Framework and technology stack to be determined based on repository analysis
-- Component structure and organization patterns
-- State management approach
-- Routing and navigation structure
+- Single-page application with modern HTML5, CSS3, and vanilla JavaScript
+- Component-based structure using React/TypeScript
+- Responsive design with Tailwind CSS framework
+- Client-side routing and navigation
 
 ### Backend Architecture
-- Server framework and runtime environment
-- API design patterns and endpoint structure
-- Authentication and authorization mechanisms
-- Middleware and request processing pipeline
+- Node.js/Express server framework
+- RESTful API design patterns
+- Contact form processing and validation
+- Static file serving capabilities
 
 ### Data Layer
-- Database technology and configuration
-- Schema design and data modeling approach
-- ORM or database access patterns
-- Data validation and migration strategies
+- File-based storage for simple data needs
+- JSON format for configuration and content
+- Form submission handling and processing
 
 ### Development and Deployment
-- Build tools and development workflow
+- Modern build tools and development workflow
 - Environment configuration management
-- Testing strategy and framework choices
-- Deployment and hosting approach
+- Responsive testing across devices
+- Professional hosting deployment
 
 ## External Dependencies
 

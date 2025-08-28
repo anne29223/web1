@@ -50,7 +50,7 @@ PORT = 5173
 try:
     with socketserver.TCPServer(("0.0.0.0", PORT), WebsiteHandler) as httpd:
         print(f"🚀 JJM Technology website running at http://0.0.0.0:{PORT}")
-        print("✅ Server ready for preview")
+        print("✅ Server ready")
         httpd.serve_forever()
 except Exception as e:
     print(f"Error starting server: {e}")

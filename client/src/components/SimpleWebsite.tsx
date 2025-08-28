@@ -271,7 +271,7 @@ export default function SimpleWebsite() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-800">Phone Number</h4>
-                      <p className="text-gray-600">7035057582</p>
+                      <p className="text-gray-600">+1 (803) 525-4143</p>
                     </div>
                   </div>
 

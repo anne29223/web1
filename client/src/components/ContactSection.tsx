@@ -208,7 +208,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-jjm-secondary mb-1">Phone Number</h4>
-                    <p className="text-jjm-neutral-dark">803-525-4143</p>
+                    <p className="text-jjm-neutral-dark">+1 (803) 525-4143</p>
                   </div>
                 </div>
 

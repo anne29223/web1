@@ -139,7 +139,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center space-x-2">
                 <i className="fas fa-phone text-jjm-primary"></i>
-                <span>+1 (555) 123-4567</span>
+                <span>+1 (803) 525-4143</span>
               </div>
               <div className="flex items-start space-x-2">
                 <i className="fas fa-map-marker-alt text-jjm-primary mt-1"></i>

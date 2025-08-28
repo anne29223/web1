@@ -280,7 +280,7 @@ export default function SimpleWebsite() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-800">Email Address</h4>
-                      <p className="text-gray-600">info@jjmtechnology.com</p>
+                      <p className="text-gray-600">info@jjmtechllc.com</p>
                     </div>
                   </div>
                 </div>

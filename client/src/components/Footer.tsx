@@ -135,7 +135,7 @@ export default function Footer() {
             <div className="space-y-3 text-gray-300">
               <div className="flex items-center space-x-2">
                 <i className="fas fa-envelope text-jjm-primary"></i>
-                <span>info@jjmtechnology.com</span>
+                <span>info@jjmtechllc.com</span>
               </div>
               <div className="flex items-center space-x-2">
                 <i className="fas fa-phone text-jjm-primary"></i>

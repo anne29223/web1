@@ -51,6 +51,15 @@ export default function ProjectsSection() {
     },
     {
       id: 6,
+      title: "Healthcare Management System",
+      description: "HIPAA-compliant patient management portal with AI-assisted diagnostics, appointment scheduling, and electronic health records.",
+      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+      category: "web",
+      status: "Completed",
+      technologies: ["Vue.js", "Node.js", "MongoDB", "HIPAA"]
+    },
+    {
+      id: 7,
       title: "Smart Logistics Tracker",
       description: "Real-time logistics tracking with AI-powered route optimization and delivery predictions.",
       image: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",

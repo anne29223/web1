@@ -55,6 +55,7 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
+            <img src="/logo.png" alt="JJM Technology" className="h-8 w-8 mr-2" />
             <div className="text-2xl font-bold text-jjm-primary">JJM Technology</div>
             <div className="text-sm text-jjm-neutral-dark ml-2">LLC</div>
           </div>

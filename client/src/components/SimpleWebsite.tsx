@@ -13,6 +13,7 @@ export default function SimpleWebsite() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
+              <img src="/logo.png" alt="JJM Technology" className="h-8 w-8 mr-2" />
               <div className="text-2xl font-bold text-blue-600">JJM Technology</div>
               <div className="text-sm text-gray-500 ml-2">LLC</div>
             </div>
@@ -270,7 +271,7 @@ export default function SimpleWebsite() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-800">Phone Number</h4>
-                      <p className="text-gray-600">+1 (555) 123-4567</p>
+                      <p className="text-gray-600">7035057582</p>
                     </div>
                   </div>
 
@@ -343,7 +344,7 @@ export default function SimpleWebsite() {
               <h4 className="text-lg font-semibold mb-4">Contact</h4>
               <div className="space-y-3 text-gray-300">
                 <p>info@jjmtechllc.com</p>
-                <p>+1 (555) 123-4567</p>
+                <p>7035057582</p>
                 <p>123 Tech Street<br />Innovation City, TC 12345</p>
               </div>
             </div>

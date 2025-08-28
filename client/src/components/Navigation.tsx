@@ -1,6 +1,32 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'wouter';
 
+import Image from 'next/image';
+
+export default function Navigation() {
+  return (
+    <nav className="flex items-center justify-between px-6 py-4 bg-white shadow-md">
+      <div className="flex items-center">
+        <Image src="/logo.png" alt="JJM Technology Logo" width={48} height={48} />
+        <span className="ml-3 text-xl font-bold text-gray-800">JJM Technology</span>
+      </div>
+      {/* Add your nav links here */}
+    </nav>
+  );
+}
+
+export default function Navigation() {
+  return (
+    <nav className="flex items-center justify-between px-6 py-4 bg-white shadow-md">
+      <div className="flex items-center">
+        <Image src="/logo.png" alt="JJM Technology Logo" width={48} height={48} />
+        <span className="ml-3 text-xl font-bold text-gray-800">JJM Technology</span>
+      </div>
+      {/* Add your nav links here */}
+    </nav>
+  );
+}
+
 export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [location] = useLocation();

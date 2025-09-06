@@ -43,7 +43,7 @@ export default function ContactSection() {
           message: formData.message,
           _replyto: formData.email,
           _subject: `New Contact Form Submission - ${formData.service} Service Inquiry`,
-          _to: 'info@jjmtechllc.com'
+          _to: 'jg5425270@gmail.com'
         })
       });
 

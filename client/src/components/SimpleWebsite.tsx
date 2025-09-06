@@ -230,7 +230,7 @@ export default function SimpleWebsite() {
             {/* Contact Form */}
             <div className="bg-gray-50 p-8 rounded-2xl">
               <h3 className="text-2xl font-semibold text-gray-800 mb-6">Send us a Message</h3>
-              <form action="https://formspree.io/f/mldwaezw" method="POST" className="space-y-6">
+              <form action="https://formspree.io/f/mldwaezw" method="POST" className="space-y-6" target="_blank">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <input type="text" name="name" placeholder="Your Name *" required className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
                   <input type="email" name="email" placeholder="Your Email *" required className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />

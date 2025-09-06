@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formspree Debug</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        .form { border: 1px solid #ccc; padding: 20px; margin: 20px 0; }
+        .result { margin: 20px 0; padding: 10px; background: #f0f0f0; }
+    </style>
+</head>
+<body>
+    <h1>Formspree Debug Test</h1>
+    
+    <div class="form">
+        <h3>Test 1: Basic Form (POST)</h3>
+        <form action="https://formspree.io/f/mldwaezw" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required><br><br>
+            <input type="email" name="email" placeholder="Your Email" required><br><br>
+            <textarea name="message" placeholder="Test message" required></textarea><br><br>
+            <button type="submit">Send Test</button>
+        </form>
+    </div>
+
+    <div class="form">
+        <h3>Test 2: With JavaScript (AJAX)</h3>
+        <form id="ajaxForm">
+            <input type="text" name="name" placeholder="Your Name" required><br><br>
+            <input type="email" name="email" placeholder="Your Email" required><br><br>
+            <textarea name="message" placeholder="Test message" required></textarea><br><br>
+            <button type="submit">Send Test (AJAX)</button>
+        </form>
+        <div id="result" class="result"></div>
+    </div>
+
+    <script>
+        document.getElementById('ajaxForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const result = document.getElementById('result');
+            result.innerHTML = 'Sending...';
+            
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            try {
+                const response = await fetch('https://formspree.io/f/mldwaezw', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data)
+                });
+                
+                if (response.ok) {
+                    result.innerHTML = '✅ Success! Check Formspree dashboard and your email.';
+                } else {
+                    result.innerHTML = '❌ Error: ' + response.status + ' ' + response.statusText;
+                }
+            } catch (error) {
+                result.innerHTML = '❌ Network Error: ' + error.message;
+            }
+        });
+    </script>
+
+    <div class="result">
+        <h3>What to check:</h3>
+        <ul>
+            <li>1. Try both forms above</li>
+            <li>2. Check browser console for errors (F12)</li>
+            <li>3. Check Formspree dashboard: <a href="https://formspree.io/dashboard" target="_blank">https://formspree.io/dashboard</a></li>
+            <li>4. Check jg5425270@gmail.com (including spam)</li>
+            <li>5. Check if form ID mldwaezw is correct</li>
+        </ul>
+    </div>
+</body>
+</html>

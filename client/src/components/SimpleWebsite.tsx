@@ -6,58 +6,6 @@ export default function SimpleWebsite() {
     }
   };
 
-  // Handle form submission
-  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    
-    const form = e.target as HTMLFormElement;
-    const formData = new FormData(form);
-    
-    const data = {
-      firstName: formData.get('firstName'),
-      lastName: formData.get('lastName'),
-      email: formData.get('email'),
-      company: formData.get('company'),
-      service: formData.get('service'),
-      message: formData.get('message'),
-      _replyto: formData.get('email'),
-      _subject: `New Contact Form Submission - ${formData.get('service')} Service Inquiry`,
-      _to: 'jg5425270@gmail.com'
-    };
-
-    const statusDiv = document.getElementById('form-status');
-    if (statusDiv) {
-      statusDiv.textContent = 'Sending...';
-      statusDiv.className = 'mt-4 text-center text-blue-600';
-      statusDiv.classList.remove('hidden');
-    }
-
-    try {
-      const response = await fetch('https://formspree.io/f/mldwaezw', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data)
-      });
-
-      if (response.ok) {
-        if (statusDiv) {
-          statusDiv.textContent = 'Thank you for your message! We will get back to you soon.';
-          statusDiv.className = 'mt-4 text-center text-green-600';
-        }
-        form.reset();
-      } else {
-        throw new Error('Form submission failed');
-      }
-    } catch (error) {
-      console.error('Error:', error);
-      if (statusDiv) {
-        statusDiv.textContent = 'There was an error sending your message. Please try again.';
-        statusDiv.className = 'mt-4 text-center text-red-600';
-      }
-    }
-  };
 
   return (
     <div className="min-h-screen bg-white">
@@ -282,26 +230,24 @@ export default function SimpleWebsite() {
             {/* Contact Form */}
             <div className="bg-gray-50 p-8 rounded-2xl">
               <h3 className="text-2xl font-semibold text-gray-800 mb-6">Send us a Message</h3>
-              <form id="contact-form" onSubmit={handleFormSubmit} className="space-y-6">
+              <form action="https://formspree.io/f/mldwaezw" method="POST" className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <input type="text" name="firstName" placeholder="First Name *" required className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
-                  <input type="text" name="lastName" placeholder="Last Name *" required className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+                  <input type="text" name="name" placeholder="Your Name *" required className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+                  <input type="email" name="email" placeholder="Your Email *" required className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
                 </div>
-                <input type="email" name="email" placeholder="Email Address *" required className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
-                <input type="text" name="company" placeholder="Company" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
-                <select name="service" required className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
-                  <option value="">Select a service</option>
-                  <option value="gen-ai">Generative AI</option>
-                  <option value="ai-automation">AI Automation</option>
-                  <option value="web-development">Web Development</option>
-                  <option value="mobile-development">Mobile Development</option>
+                <input type="text" name="company" placeholder="Company (Optional)" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+                <select name="service" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                  <option value="">Select a service (Optional)</option>
+                  <option value="Generative AI">Generative AI</option>
+                  <option value="AI Automation">AI Automation</option>
+                  <option value="Web Development">Web Development</option>
+                  <option value="Mobile Development">Mobile Development</option>
                 </select>
-                <textarea name="message" placeholder="Project Description *" rows={4} required className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+                <textarea name="message" placeholder="Your Message *" rows={4} required className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
                 <button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg">
                   Send Message
                 </button>
               </form>
-              <div id="form-status" className="mt-4 text-center hidden"></div>
             </div>
 
             {/* Contact Information */}

@@ -778,18 +778,31 @@
                 message: document.getElementById('message').value
             };
 
-            // Simulate API call
-            fetch('/api/contact', {
+            // Using Formspree
+            fetch('https://formspree.io/f/mldwaezw', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify(data)
+                body: JSON.stringify({
+                    firstName: data.firstName,
+                    lastName: data.lastName,
+                    email: data.email,
+                    company: data.company,
+                    service: data.service,
+                    message: data.message,
+                    _replyto: data.email,
+                    _subject: `New Contact Form Submission - ${data.service} Service Inquiry`,
+                    _to: 'info@jjmtechllc.com'
+                })
             })
-            .then(response => response.json())
-            .then(result => {
-                document.getElementById('success-modal').classList.remove('hidden');
-                e.target.reset();
+            .then(response => {
+                if (response.ok) {
+                    document.getElementById('success-modal').classList.remove('hidden');
+                    e.target.reset();
+                } else {
+                    throw new Error('Form submission failed');
+                }
             })
             .catch(error => {
                 console.error('Error:', error);

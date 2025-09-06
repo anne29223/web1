@@ -30,13 +30,22 @@ export default function ContactSection() {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('/api/contact', {
+      // Using Formspree
+      const response = await fetch('https://formspree.io/f/mldwaezw', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData)
+        body: JSON.stringify({
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          email: formData.email,
+          company: formData.company,
+          service: formData.service,
+          message: formData.message,
+          _replyto: formData.email,
+          _subject: `New Contact Form Submission - ${formData.service} Service Inquiry`,
+          _to: 'info@jjmtechllc.com'
+        })
       });
-
-      const result = await response.json();
 
       if (response.ok) {
         setSubmitMessage('Thank you for your message! We will get back to you soon.');

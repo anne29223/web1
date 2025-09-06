@@ -3,6 +3,7 @@ import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { insertContactSchema } from "@shared/schema";
 import { z } from "zod";
+import { emailService } from "./emailService";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Contact form submission endpoint
@@ -10,6 +11,22 @@ export async function registerRoutes(app: Express): Promise<Server> {
     try {
       const validatedData = insertContactSchema.parse(req.body);
       const submission = await storage.createContactSubmission(validatedData);
+      
+      // Send email notification
+      const emailSent = await emailService.sendContactFormEmail({
+        firstName: validatedData.firstName,
+        lastName: validatedData.lastName,
+        email: validatedData.email,
+        company: validatedData.company,
+        service: validatedData.service,
+        message: validatedData.message
+      });
+
+      if (emailSent) {
+        console.log(`Email notification sent for contact submission: ${submission.id}`);
+      } else {
+        console.warn(`Failed to send email notification for contact submission: ${submission.id}`);
+      }
       
       res.status(201).json({
         success: true,
@@ -24,6 +41,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
           errors: error.errors
         });
       } else {
+        console.error('Contact form error:', error);
         res.status(500).json({
           success: false,
           message: "An error occurred while processing your request"
